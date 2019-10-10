@@ -32,6 +32,8 @@
 * @copywrite Acme Robotics, Ethan Quist, Corbyn Yhap
 */
 
+#include <vector>
+
 class InverseKinematics {
 
 
@@ -43,7 +45,8 @@ public:
 *  @return vector of dobules [q1,q2,q3,q4,q5] of the 5 joint angles
 */
   std::vector <double> computeIK(double x, double y, double z);
+
 };
 
 
-}
+

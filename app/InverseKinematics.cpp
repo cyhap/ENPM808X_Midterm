@@ -29,7 +29,7 @@
 
 std::vector <double> InverseKinematics::computeIK(double x, double y, double z){
 
-  std::vector <double> jointAngles = [0.0, 0.0, 0.0, 0.0, 0.0];
+  std::vector <double> jointAngles(5,0.0);
 
   return jointAngles; 
 

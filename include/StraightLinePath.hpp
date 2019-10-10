@@ -32,6 +32,8 @@
 * @copywrite Acme Robotics, Ethan Quist, Corbyn Yhap
 */
 
+#include <vector>
+
 class StraightLinePath {
 
 
@@ -42,7 +44,7 @@ public:
 *  @return 2D vector of [x y z] points along the path
 */
   std::vector<std::vector<double> > computePath(std::vector<double> start, std::vector<double> end);
+
+
+
 };
-
-
-}
