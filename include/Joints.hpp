@@ -33,6 +33,8 @@
 */
 #pragma once
 
+#include <memory>
+
 class IJoint {
  public:
 
@@ -58,6 +60,8 @@ class IJoint {
    */
   void setConfig(double) = 0;
 };
+// Typedef the pointer for easy external polymorphic use.
+typedef std::unique_ptr<IJoint> JointPtr;
 
 class PrismaticJoint : IJoint {
  public:
