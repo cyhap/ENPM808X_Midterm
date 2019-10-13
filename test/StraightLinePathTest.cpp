@@ -22,14 +22,20 @@
 * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-* /
+*
+*/
+
 #include <gtest/gtest.h>
-#include <StraightLinePath.hpp>
+#include "StraightLinePath.hpp"
 TEST(StraightLinePath, checkContract){
-  StraightLinePath PathMaker();
+  StraightLinePath PathMaker;
   std::vector<std::vector<double> > result;
-  std::vector<double> start = [0,0,0];
-  std::vector<double> end = [0,0,0]
+  std::vector<double> start(3,0.0);
+  std::vector<double> end(3,0.0);
   result = PathMaker.computePath(start,end);
-  ASSERT_EQ([[0,0,0],[0,0,0]], result); 
+  std::vector<std::vector<double> > expected;
+  std::vector<double> zeros(3,0.0);
+  expected.push_back(zeros);
+  expected.push_back(zeros);
+  ASSERT_EQ( expected , result); 
 }

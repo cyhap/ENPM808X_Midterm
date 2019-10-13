@@ -27,7 +27,7 @@
 
 #include "StraightLinePath.hpp"
 
-std::vector<std::vector<<double> > StraightLinePath::computePath(std::vecotor<double> start, std::vector<dobule> end){
+std::vector<std::vector<double> > StraightLinePath::computePath(std::vector<double> start, std::vector<double> end){
 
   std::vector<std::vector<double> > points;
 
