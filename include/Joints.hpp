@@ -61,9 +61,9 @@ class IJoint {
   virtual void setConfig(double) = 0;
 };
 // Typedef the pointer for easy external polymorphic use.
-typedef std::unique_ptr<IJoint> JointPtr;
+typedef std::shared_ptr<IJoint> JointPtr;
 
-class PrismaticJoint : IJoint {
+class PrismaticJoint : public IJoint {
  public:
 
   /**
@@ -125,7 +125,7 @@ class PrismaticJoint : IJoint {
 };
 
 
-class RevoluteJoint : IJoint {
+class RevoluteJoint : public IJoint {
  public:
 
   /**

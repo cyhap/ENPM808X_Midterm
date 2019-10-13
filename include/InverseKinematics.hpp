@@ -53,7 +53,7 @@ class InverseKinematicsBase {
    * can be retrieved)
 
    */
-  std::vector<JointPtr> computeIK(Coordinate) = 0;
+  virtual std::vector<JointPtr> computeIK(Coordinate) = 0;
 };
 
 class InverseKinematicAcmeArm : InverseKinematicsBase {
