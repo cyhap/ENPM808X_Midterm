@@ -47,7 +47,7 @@ class IJoint {
    * @return double
 
    */
-  double getConfig() = 0;
+  virtual double getConfig() = 0;
 
   /**
 
@@ -58,7 +58,7 @@ class IJoint {
    * @return None.
 
    */
-  void setConfig(double) = 0;
+  virtual void setConfig(double) = 0;
 };
 // Typedef the pointer for easy external polymorphic use.
 typedef std::unique_ptr<IJoint> JointPtr;
