@@ -53,7 +53,7 @@ class StraightLinePath : IPathPlanner {
    */
   std::vector<Coordinate> computePath(const Coordinate &aStart,
                                       const Coordinate &aEnd,
-                                      const double &aIncrement) = 0;
+                                      const double &aIncrement);
 
  protected:
 
@@ -73,7 +73,7 @@ class StraightLinePath : IPathPlanner {
    */
   Coordinate determineDirection(const Coordinate &aStart,
                                 const Coordinate &aEnd,
-                                const double &aIncrement) = 0;
+                                const double &aIncrement);
 };
 
 
