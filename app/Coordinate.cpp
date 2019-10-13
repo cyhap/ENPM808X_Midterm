@@ -66,12 +66,17 @@ void Coordinate::setXYZ(const double &aX, const double &aY, const double &aZ) {
   y = aY;
   z = aZ;
 }
+bool Coordinate::operator==(const Coordinate rhs) const {
+  return (x == rhs.x && y == rhs.y && z == rhs.z);
+}
 
 double Coordinate::convertM2F(double aMeters) {
+  (void) aMeters;
   return 0;
 }
 
-double Coordinate::convertF2M(double) {
+double Coordinate::convertF2M(double aFeet) {
+  (void) aFeet;
   return 0;
 }
 
