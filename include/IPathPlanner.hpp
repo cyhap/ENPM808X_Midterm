@@ -56,7 +56,7 @@ class IPathPlanner {
    * start to end.
 
    */
-  std::vector<Coordinate> computePath(const Coordinate &aStart,
+  virtual std::vector<Coordinate> computePath(const Coordinate &aStart,
                                       const Coordinate &aEnd,
                                       const double &aIncrement) = 0;
 
@@ -76,7 +76,7 @@ class IPathPlanner {
    * point along the path.
 
    */
-  Coordinate determineDirection(const Coordinate &aStart,
+  virtual Coordinate determineDirection(const Coordinate &aStart,
                                 const Coordinate &aEnd,
                                 const double &aIncrement) = 0;
 };
