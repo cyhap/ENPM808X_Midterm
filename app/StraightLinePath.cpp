@@ -27,6 +27,14 @@
 
 #include "StraightLinePath.hpp"
 
+StraightLinePath::StraightLinePath() {
+
+}
+
+StraightLinePath::~StraightLinePath() {
+
+}
+
 std::vector<Coordinate> StraightLinePath::computePath(
     const Coordinate &aStart, const Coordinate &aEnd,
     const double &aIncrement) {

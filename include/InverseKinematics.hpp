@@ -41,6 +41,17 @@
 class InverseKinematicsBase {
 
  public:
+  /**
+
+   * @brief Virtual Destructor for the IK Base Class
+
+   * @param None.
+
+   * @return None.
+
+   */
+
+  virtual ~InverseKinematicsBase();
 
   /**
 
@@ -80,7 +91,7 @@ class InverseKinematicAcmeArm : InverseKinematicsBase {
    * @return None.
 
    */
-  ~InverseKinematicAcmeArm();
+  virtual ~InverseKinematicAcmeArm();
 
   /**
 

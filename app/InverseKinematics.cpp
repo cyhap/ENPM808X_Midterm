@@ -27,6 +27,17 @@
 
 #include "InverseKinematics.hpp"
 
+InverseKinematicsBase::~InverseKinematicsBase() {
+
+}
+
+InverseKinematicAcmeArm::InverseKinematicAcmeArm() {
+
+}
+
+InverseKinematicAcmeArm::~InverseKinematicAcmeArm() {
+
+}
 std::vector<JointPtr> InverseKinematicAcmeArm::computeIK(Coordinate aPoint) {
 
   (void) aPoint;
