@@ -25,35 +25,65 @@
  *
  */
 
-#include "StraightLinePath.hpp"
+#include "Coordinate.hpp"
 
-StraightLinePath::StraightLinePath() {
+Coordinate::Coordinate(double aX, double aY, double aZ)
+    :
+    x(aX),
+    y(aY),
+    z(aZ) {
 
 }
 
-StraightLinePath::~StraightLinePath() {
+Coordinate::~Coordinate() {
 
 }
-
-std::vector<Coordinate> StraightLinePath::computePath(
-    const Coordinate &aStart, const Coordinate &aEnd,
-    const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
-
-  std::vector<Coordinate> points;
-
-  return points;
+double Coordinate::getX() {
+  return x;
+}
+double Coordinate::getY() {
+  return y;
 }
 
-Coordinate StraightLinePath::determineDirection(const Coordinate &aStart,
-                                                const Coordinate &aEnd,
-                                                const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
+double Coordinate::getZ() {
+  return z;
+}
 
-  Coordinate tReturn(0, 0, 0);
-  return tReturn;
+void Coordinate::setX(const double &aX) {
+  x = aX;
+}
+
+void Coordinate::setY(const double &aY) {
+  y = aY;
+}
+
+void Coordinate::setZ(const double &aZ) {
+  z = aZ;
+}
+
+void Coordinate::setXYZ(const double &aX, const double &aY, const double &aZ) {
+  x = aX;
+  y = aY;
+  z = aZ;
+}
+bool Coordinate::operator==(const Coordinate rhs) const {
+  return (x == rhs.x && y == rhs.y && z == rhs.z);
+}
+
+double Coordinate::convertM2F(double aMeters) {
+  (void) aMeters;
+  return 0;
+}
+
+double Coordinate::convertF2M(double aFeet) {
+  (void) aFeet;
+  return 0;
+}
+
+Coordinate::Coordinate()
+    :
+    x(0),
+    y(0),
+    z(0) {
+
 }
