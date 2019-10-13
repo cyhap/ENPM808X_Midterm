@@ -40,6 +40,17 @@ class IJoint {
 
   /**
 
+   * @brief Destructor for Joint Interface
+
+   * @param None.
+
+   * @return None
+
+   */
+  virtual ~IJoint();
+
+  /**
+
    * @brief Method to retrieve current joint configuration
 
    * @param None.
@@ -97,7 +108,7 @@ class PrismaticJoint : public IJoint {
    * @return None.
 
    */
-  ~PrismaticJoint();
+  virtual ~PrismaticJoint();
 
   /**
 
@@ -123,7 +134,6 @@ class PrismaticJoint : public IJoint {
  private:
   double length;
 };
-
 
 class RevoluteJoint : public IJoint {
  public:
@@ -159,7 +169,7 @@ class RevoluteJoint : public IJoint {
    * @return None.
 
    */
-  ~RevoluteJoint();
+  virtual ~RevoluteJoint();
 
   /**
 
