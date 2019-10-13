@@ -144,6 +144,37 @@ class Coordinate {
   void setXYZ(const double &aX, const double &aY, const double &aZ);
 
  private:
+  /**
+
+   * @brief Convert Meters to Feet
+
+   * @param double The value in meters
+
+   * @return The converted value in feet.
+
+   */
+  double convertM2F(double);
+  /**
+
+   * @brief Convert Feet to Meters
+
+   * @param double The value in Feet
+
+   * @return double The converted value in Meters.
+
+   */
+  double convertF2M(double);
+  /**
+
+   * @brief Constructor for the Coordinate Class
+
+   * @param None.
+
+   * @return None.
+
+   */
+  Coordinate();
+
   double x;
   double y;
   double z;
