@@ -40,6 +40,17 @@ class IJoint {
 
   /**
 
+   * @brief Destructor for Joint Interface
+
+   * @param None.
+
+   * @return None
+
+   */
+  virtual ~IJoint();
+
+  /**
+
    * @brief Method to retrieve current joint configuration
 
    * @param None.
@@ -61,9 +72,9 @@ class IJoint {
   virtual void setConfig(double) = 0;
 };
 // Typedef the pointer for easy external polymorphic use.
-typedef std::unique_ptr<IJoint> JointPtr;
+typedef std::shared_ptr<IJoint> JointPtr;
 
-class PrismaticJoint : IJoint {
+class PrismaticJoint : public IJoint {
  public:
 
   /**
@@ -97,7 +108,7 @@ class PrismaticJoint : IJoint {
    * @return None.
 
    */
-  ~PrismaticJoint();
+  virtual ~PrismaticJoint();
 
   /**
 
@@ -124,8 +135,7 @@ class PrismaticJoint : IJoint {
   double length;
 };
 
-
-class RevoluteJoint : IJoint {
+class RevoluteJoint : public IJoint {
  public:
 
   /**
@@ -159,7 +169,7 @@ class RevoluteJoint : IJoint {
    * @return None.
 
    */
-  ~RevoluteJoint();
+  virtual ~RevoluteJoint();
 
   /**
 

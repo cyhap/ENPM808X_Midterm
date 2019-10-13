@@ -33,9 +33,32 @@
  */
 #include "IPathPlanner.hpp"
 
-class StraightLinePath : IPathPlanner {
+class StraightLinePath : public IPathPlanner {
 
  public:
+
+  /**
+
+   * @brief Constructor for the Straight Line Path Class
+
+   * @param None.
+
+   * @return None.
+
+   */
+  StraightLinePath();
+
+  /**
+
+   * @brief Destructor for the Straight Line Path Class
+
+   * @param None.
+
+   * @return None.
+
+   */
+  virtual ~StraightLinePath();
+
   /**
 
    * @brief Method to Compute the 3 Dimensional path from start point to end

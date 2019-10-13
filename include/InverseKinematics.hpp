@@ -41,6 +41,17 @@
 class InverseKinematicsBase {
 
  public:
+  /**
+
+   * @brief Virtual Destructor for the IK Base Class
+
+   * @param None.
+
+   * @return None.
+
+   */
+
+  virtual ~InverseKinematicsBase();
 
   /**
 
@@ -53,7 +64,7 @@ class InverseKinematicsBase {
    * can be retrieved)
 
    */
-  std::vector<JointPtr> computeIK(Coordinate) = 0;
+  virtual std::vector<JointPtr> computeIK(Coordinate) = 0;
 };
 
 class InverseKinematicAcmeArm : InverseKinematicsBase {
@@ -80,7 +91,7 @@ class InverseKinematicAcmeArm : InverseKinematicsBase {
    * @return None.
 
    */
-  ~InverseKinematicAcmeArm();
+  virtual ~InverseKinematicAcmeArm();
 
   /**
 

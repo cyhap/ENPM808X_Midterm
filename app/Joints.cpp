@@ -25,35 +25,56 @@
  *
  */
 
-#include "StraightLinePath.hpp"
+#include "Joints.hpp"
 
-StraightLinePath::StraightLinePath() {
-
-}
-
-StraightLinePath::~StraightLinePath() {
+IJoint::~IJoint() {
 
 }
 
-std::vector<Coordinate> StraightLinePath::computePath(
-    const Coordinate &aStart, const Coordinate &aEnd,
-    const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
+PrismaticJoint::PrismaticJoint()
+    :
+    length(0) {
 
-  std::vector<Coordinate> points;
-
-  return points;
 }
 
-Coordinate StraightLinePath::determineDirection(const Coordinate &aStart,
-                                                const Coordinate &aEnd,
-                                                const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
+PrismaticJoint::PrismaticJoint(double aLength)
+    :
+    length(aLength) {
 
-  Coordinate tReturn(0, 0, 0);
-  return tReturn;
+}
+
+PrismaticJoint::~PrismaticJoint() {
+
+}
+
+double PrismaticJoint::getConfig() {
+  return length;
+}
+
+void PrismaticJoint::setConfig(double aLength) {
+  length = aLength;
+}
+
+RevoluteJoint::RevoluteJoint()
+    :
+    angle(0) {
+
+}
+
+RevoluteJoint::RevoluteJoint(double aAngle)
+    :
+    angle(aAngle) {
+
+}
+
+RevoluteJoint::~RevoluteJoint() {
+
+}
+
+double RevoluteJoint::getConfig() {
+  return angle;
+}
+
+void RevoluteJoint::setConfig(double aAngle) {
+  angle = aAngle;
 }
