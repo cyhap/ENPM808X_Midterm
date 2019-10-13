@@ -22,14 +22,16 @@
 * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-* /
+*
+*/
 
 #include <gtest/gtest.h>
-#include <InverseKinematics.hpp>
+#include "InverseKinematics.hpp"
 
 TEST(InverseKinematics, checkContract){
-  InverseKinematics IKsolver();
+  InverseKinematics IKsolver;
   std::vector <double> result;
-  result = IKsolver.computeIK(0,0,0);
-  ASSERT_EQ([0.0, 0.0, 0.0, 0.0, 0.0], result); 
+  result = IKsolver.computeIK(0.0, 0.0, 0.0);
+  std::vector <double> expected(5,0.0);
+  ASSERT_EQ( expected , result); 
 }

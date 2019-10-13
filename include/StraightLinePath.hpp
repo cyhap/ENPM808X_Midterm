@@ -29,7 +29,7 @@
  *
  * @author Ethan Quist (driver) and Corbyn Yhap (navigator)
  *
- * @copywrite Acme Robotics, Ethan Quist, Corbyn Yhap
+ * @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
  */
 #include "IPathPlanner.hpp"
 
@@ -75,5 +75,3 @@ class StraightLinePath : IPathPlanner {
                                 const Coordinate &aEnd,
                                 const double &aIncrement);
 };
-
-
