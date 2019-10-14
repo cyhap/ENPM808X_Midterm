@@ -4,6 +4,13 @@ add_executable(
     cpp-test
     main.cpp
     test.cpp
+    ${CMAKE_SOURCE_DIR}/app/InverseKinematics.cpp
+    ${CMAKE_SOURCE_DIR}/app/Coordinate.cpp
+    ${CMAKE_SOURCE_DIR}/app/Joints.cpp
+    InverseKinematicsTest.cpp
+    ${CMAKE_SOURCE_DIR}/app/StraightLinePath.cpp
+    StraightLinePathTest.cpp
+    
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 

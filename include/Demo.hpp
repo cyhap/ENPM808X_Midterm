@@ -23,37 +23,34 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
+ * @file Demo.hpp
+ *
+ * @brief The class header for our Demo Class
+ *
+ * @author Ethan Quist (driver) and Corbyn Yhap (Navigator)
+ *
+ * @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
  */
+#pragma once
 
-#include "StraightLinePath.hpp"
+#include <memory>
+#include <vector>
+#include <cmath>
 
-StraightLinePath::StraightLinePath() {
 
-}
+class Demo {
 
-StraightLinePath::~StraightLinePath() {
+ public:
+  /**
 
-}
+   * @brief Method to run the demonstration of our IK Solver
+   *
 
-std::vector<Coordinate> StraightLinePath::computePath(
-    const Coordinate &aStart, const Coordinate &aEnd,
-    const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
+   * @param none
 
-  std::vector<Coordinate> points;
+   * @return none
+   *
 
-  return points;
-}
-
-Coordinate StraightLinePath::determineDirection(const Coordinate &aStart,
-                                                const Coordinate &aEnd,
-                                                const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
-
-  Coordinate tReturn(0, 0, 0);
-  return tReturn;
-}
+   */
+  void runDemo();
+};

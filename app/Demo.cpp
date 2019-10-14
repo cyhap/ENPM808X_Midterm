@@ -25,35 +25,27 @@
  *
  */
 
-#include "StraightLinePath.hpp"
 
-StraightLinePath::StraightLinePath() {
+#include "Demo.hpp"
+#include "matplotlibcpp.h"
 
+//namespace plt = matplotlibcpp;
+
+void Demo::runDemo() {
+  int t = 1000;
+  int i = 0;
+  std::vector<double> x;
+  std::vector<double> y;
+  std::vector<double> z;
+  for(i = 0; i<t; i++) {
+    x.push_back(i);
+    y.push_back(sin(3.14*i/180));
+    if(i % 10 == 0) {
+      matplotlibcpp::clf();
+      matplotlibcpp::plot(x,y);
+      matplotlibcpp::title("Trajectory Demo");
+      matplotlibcpp::pause(0.01);
+    }
+  }
 }
 
-StraightLinePath::~StraightLinePath() {
-
-}
-
-std::vector<Coordinate> StraightLinePath::computePath(
-    const Coordinate &aStart, const Coordinate &aEnd,
-    const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
-
-  std::vector<Coordinate> points;
-
-  return points;
-}
-
-Coordinate StraightLinePath::determineDirection(const Coordinate &aStart,
-                                                const Coordinate &aEnd,
-                                                const double &aIncrement) {
-  (void) aStart;
-  (void) aEnd;
-  (void) aIncrement;
-
-  Coordinate tReturn(0, 0, 0);
-  return tReturn;
-}

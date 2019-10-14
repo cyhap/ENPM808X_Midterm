@@ -23,20 +23,62 @@
 * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *
-* @file lib.hpp
+ * @file IPathPlanner.hpp
 *
-* @brief header for file TO BE DELETED
+ * @brief Interface/Abstract Path Planning Class (Defines required functions)
 *
-* @author Corbyn Yhap (Driver)
+ * @author Corbyn Yhap (Driver)
 *
-* @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
+ * @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
 */
-
 #pragma once
 
-#include<iostream>
-#include <Demo.hpp>
+#include <memory>
+#include <vector>
 
-void dummy() {
-    std::cout << "HI" << std::endl;
-}
+#include "Coordinate.hpp"
+
+class IPathPlanner {
+ public:
+
+  /**
+
+   * @brief Method to Compute the 3 Dimensional path from start point to end
+   * point by desired increments (or less).
+
+   * @param aStart Coordinate of the Starting Point.
+
+   * @param aEnd Coordinate of the Ending Point.
+
+   * @param aIncrement double. The max distance between path points.
+
+   * @return std::vector<Coordinate> The points corresponding to the path from
+   * start to end.
+
+   */
+  virtual std::vector<Coordinate> computePath(const Coordinate &aStart,
+                                      const Coordinate &aEnd,
+                                      const double &aIncrement) = 0;
+
+ protected:
+
+  /**
+
+   * @brief Method to Determine the direction the next point should be in
+
+   * @param aStart Coordinate of the Starting Point.
+
+   * @param aEnd Coordinate of the Ending Point.
+
+   * @param aIncrement double. The max distance between path points.
+
+   * @return Coordinate The unit vector representing the direction of the next
+   * point along the path.
+
+   */
+  virtual Coordinate determineDirection(const Coordinate &aStart,
+                                const Coordinate &aEnd,
+                                const double &aIncrement) = 0;
+};
+// Typedef the pointer for easy external polymorphic use.
+typedef std::unique_ptr<IPathPlanner> PathPlanPtr;
