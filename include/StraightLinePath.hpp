@@ -31,6 +31,8 @@
  *
  * @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
  */
+#pragma once
+#include <vector>
 #include "IPathPlanner.hpp"
 
 class StraightLinePath : public IPathPlanner {
