@@ -97,7 +97,7 @@ class PrismaticJoint : public IJoint {
    * @return None.
 
    */
-//  PrismaticJoint(double);
+  PrismaticJoint(double);
 
   /**
 
@@ -158,7 +158,7 @@ class RevoluteJoint : public IJoint {
    * @return None.
 
    */
-//  RevoluteJoint(double);
+  RevoluteJoint(double);
 
   /**
 
