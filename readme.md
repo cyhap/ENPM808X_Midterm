@@ -58,7 +58,9 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
-These steps will allow for the repository to be cloned remotely. The steps include building the project as well as running the unit tests and main program. The main program will in future iterations include the demonstration code to simulate the Inverse Kinematic Motion Planner. This is currently still under development as well are working through an issue with linking an external library. 
+These steps will allow for the repository to be cloned remotely. The steps include building the project as well as running the unit tests and main program. 
+
+Running ./app/shell-app in the build folder will run out demonstration. We are using matplotlib (with a c++ wrapper) to display the trajectory of our desired path as well as the path the robot takes along that trajectory to go from initial point to end point. In Phase 1 this is a simple demonstration of our Trajectory Window displaying a sample trajectory. In Phase 2 the full functionality of the simulation will be in place.
 
 
 ## Dependencies
@@ -71,11 +73,11 @@ sudo apt-get install python-matplotlib python-numpy python2.7-dev
 
 ## Known Issues and Bugs
 
-We are currently working through an issue with linking the external Python libraries to our CMakeLists.txt file. This is preventing us from adding our demonstration class to the repository for Phase 1. 
-
 Our current version of CMake was not cooperating with the download of Doxygen. Therefore we had to generate all of our Doxygen files in a Windows environment instead of a Linux environment. The documents are linked in the docs subfolder. 
 
 ## How to build and run
+
+The steps to build and run from the command prompt are listed above in the "Operation" section. If you choose to build and run from Eclipse the instructions are below:
 
 To build the project, in Eclipse, unfold boilerplate-eclipse project in Project Explorer,
 unfold Build Targets, double click on "all" to build all projects.
