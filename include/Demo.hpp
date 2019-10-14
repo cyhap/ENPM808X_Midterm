@@ -23,12 +23,34 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
+ * @file Demo.hpp
+ *
+ * @brief The class header for our Demo Class
+ *
+ * @author Ethan Quist (driver) and Corbyn Yhap (Navigator)
+ *
+ * @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
  */
-#include <iostream>
-#include <lib.hpp>
+#pragma once
 
-int main() {
-    Demo demonstration;
-    demonstration.runDemo();
-    return 0;
-}
+#include <memory>
+#include <vector>
+#include <cmath>
+
+
+class Demo {
+
+ public:
+  /**
+
+   * @brief Method to run the demonstration of our IK Solver
+   *
+
+   * @param none
+
+   * @return none
+   *
+
+   */
+  void runDemo();
+};
