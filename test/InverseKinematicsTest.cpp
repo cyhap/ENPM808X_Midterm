@@ -25,9 +25,10 @@
 *
 */
 
-#include <gtest/gtest.h>
-#include "InverseKinematics.hpp"
 #include <algorithm>
+#include <gtest/gtest.h>
+
+#include "InverseKinematics.hpp"
 
 bool compareConfig(const JointPtr lhs, const JointPtr rhs) {
   return lhs->getConfig() == rhs->getConfig();
