@@ -23,80 +23,34 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * @file StraightLinePath.hpp
+ * @file Demo.hpp
  *
- * @brief The class header for our Straight Line Path Class
+ * @brief The class header for our Demo Class
  *
- * @author Ethan Quist (driver) and Corbyn Yhap (navigator)
+ * @author Ethan Quist (driver) and Corbyn Yhap (Navigator)
  *
  * @copyright Acme Robotics, Ethan Quist, Corbyn Yhap
  */
 #pragma once
-#include <vector>
-#include "IPathPlanner.hpp"
 
-class StraightLinePath : public IPathPlanner {
+#include <memory>
+#include <vector>
+#include <cmath>
+
+
+class Demo {
 
  public:
-
   /**
 
-   * @brief Constructor for the Straight Line Path Class
+   * @brief Method to run the demonstration of our IK Solver
+   *
 
-   * @param None.
+   * @param none
 
-   * @return None.
-
-   */
-  StraightLinePath();
-
-  /**
-
-   * @brief Destructor for the Straight Line Path Class
-
-   * @param None.
-
-   * @return None.
+   * @return none
+   *
 
    */
-  virtual ~StraightLinePath();
-
-  /**
-
-   * @brief Method to Compute the 3 Dimensional path from start point to end
-   * point by desired increments (or less).
-
-   * @param aStart Coordinate of the Starting Point.
-
-   * @param aEnd Coordinate of the Ending Point.
-
-   * @param aIncrement double. The max distance between path points.
-
-   * @return std::vector<Coordinate> The points corresponding to the path from
-   * start to end.
-
-   */
-  std::vector<Coordinate> computePath(const Coordinate &aStart,
-                                      const Coordinate &aEnd,
-                                      const double &aIncrement);
-
- protected:
-
-  /**
-
-   * @brief Method to Determine the direction the next point should be in
-
-   * @param aStart Coordinate of the Starting Point.
-
-   * @param aEnd Coordinate of the Ending Point.
-
-   * @param aIncrement double. The max distance between path points.
-
-   * @return Coordinate The unit vector representing the direction of the next
-   * point along the path.
-
-   */
-  Coordinate determineDirection(const Coordinate &aStart,
-                                const Coordinate &aEnd,
-                                const double &aIncrement);
+  void runDemo();
 };

@@ -16,7 +16,10 @@ if (COVERAGE)
                       app/InverseKinematics.cpp 
                       app/StraightLinePath.cpp 
                       include/InverseKinematics.hpp 
-                      include/StraightLinePath.hpp )
+                      include/StraightLinePath.hpp
+                      include/Demo.hpp 
+                      app/Demo.cpp 
+                      include/matplotlibcpp.h)
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
