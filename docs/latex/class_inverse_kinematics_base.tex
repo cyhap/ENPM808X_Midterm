@@ -1,0 +1,67 @@
+\hypertarget{class_inverse_kinematics_base}{}\doxysection{Inverse\+Kinematics\+Base Class Reference}
+\label{class_inverse_kinematics_base}\index{InverseKinematicsBase@{InverseKinematicsBase}}
+Inheritance diagram for Inverse\+Kinematics\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inverse_kinematics_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_inverse_kinematics_base_ac4eb08b2a1eb02f37547b95e2a76fa22}{$\sim$\+Inverse\+Kinematics\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Virtual Destructor for the IK \mbox{\hyperlink{class_base}{Base}} Class. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ Joint\+Ptr $>$ \mbox{\hyperlink{class_inverse_kinematics_base_a734d15484a86fa6163c4c6b05d6afe53}{compute\+IK}} (\mbox{\hyperlink{class_coordinate}{Coordinate}})=0
+\begin{DoxyCompactList}\small\item\em Method to compute Inverse Kinematics. Required of all Derived Classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_inverse_kinematics_base_ac4eb08b2a1eb02f37547b95e2a76fa22}\label{class_inverse_kinematics_base_ac4eb08b2a1eb02f37547b95e2a76fa22}} 
+\index{InverseKinematicsBase@{InverseKinematicsBase}!````~InverseKinematicsBase@{$\sim$InverseKinematicsBase}}
+\index{````~InverseKinematicsBase@{$\sim$InverseKinematicsBase}!InverseKinematicsBase@{InverseKinematicsBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$InverseKinematicsBase()}{~InverseKinematicsBase()}}
+{\footnotesize\ttfamily Inverse\+Kinematics\+Base\+::$\sim$\+Inverse\+Kinematics\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual Destructor for the IK \mbox{\hyperlink{class_base}{Base}} Class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inverse_kinematics_base_a734d15484a86fa6163c4c6b05d6afe53}\label{class_inverse_kinematics_base_a734d15484a86fa6163c4c6b05d6afe53}} 
+\index{InverseKinematicsBase@{InverseKinematicsBase}!computeIK@{computeIK}}
+\index{computeIK@{computeIK}!InverseKinematicsBase@{InverseKinematicsBase}}
+\doxysubsubsection{\texorpdfstring{computeIK()}{computeIK()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$Joint\+Ptr$>$ Inverse\+Kinematics\+Base\+::compute\+IK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coordinate}{Coordinate}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to compute Inverse Kinematics. Required of all Derived Classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Coordinate.} & A X\+YZ \mbox{\hyperlink{class_coordinate}{Coordinate}} (Meters)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Joint\+Ptr$>$ A vector of joints (From which configurations can be retrieved) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_inverse_kinematic_acme_arm_a681d40e86bc86db245aca9d5d5bb9460}{Inverse\+Kinematic\+Acme\+Arm}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ethan/source/repos/\+E\+N\+P\+M808\+X\+\_\+\+Midterm-\/master/include/Inverse\+Kinematics.\+hpp\item 
+C\+:/\+Users/ethan/source/repos/\+E\+N\+P\+M808\+X\+\_\+\+Midterm-\/master/app/Inverse\+Kinematics.\+cpp\end{DoxyCompactItemize}
