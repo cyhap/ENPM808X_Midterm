@@ -143,7 +143,7 @@ class Coordinate {
    */
   void setXYZ(const double &aX, const double &aY, const double &aZ);
 
-  bool operator==(const Coordinate rhs) const;
+  bool operator==(const Coordinate &rhs) const;
 
  private:
   /**
