@@ -25,16 +25,40 @@
 *
 */
 
+#include <algorithm>
 #include <gtest/gtest.h>
+
 #include "InverseKinematics.hpp"
+
+bool compareConfig(const JointPtr lhs, const JointPtr rhs) {
+  return lhs->getConfig() == rhs->getConfig();
+}
 
 TEST(InverseKinematics, checkContract){
   InverseKinematicAcmeArm IKsolver;
   std::vector<JointPtr> result;
-  Coordinate inputPoint(0, 0, 0);
+  // Using the Coordinates from the Paper
+  Coordinate inputPoint(3, 0, 2);
   result = IKsolver.computeIK(inputPoint);
 
-  JointPtr tDefaultJoint(new RevoluteJoint);
-  std::vector<JointPtr> expected(5, tDefaultJoint);
-  ASSERT_EQ( expected , result);
+  JointPtr tQ1(new RevoluteJoint(0));
+  JointPtr tQ2(new RevoluteJoint(-49.9677));
+  JointPtr tQ3(new RevoluteJoint(81.0107));
+  JointPtr tQ4(new RevoluteJoint(-31.0430));
+  JointPtr tQ5(new RevoluteJoint(0));
+
+  std::vector<JointPtr> expected;
+
+  expected.push_back(tQ1);
+  expected.push_back(tQ2);
+  expected.push_back(tQ3);
+  expected.push_back(tQ4);
+  expected.push_back(tQ5);
+
+  // Test the number of joints that were output
+  ASSERT_EQ(expected.size(), result.size());
+  // Test Each element in each matches (in order)
+  bool equalJoints = std::equal(expected.begin(), expected.end(),
+                                result.begin(), compareConfig);
+  ASSERT_TRUE(equalJoints);
 }
